@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "./TestVault.t.sol";
 
 // Test whether the vault's fund can be stolen or not
-contract TestBalance is FuzzVault {
+contract TestBalance is TestVault {
     function setUp() external {
         // Step 1. Deploy the smart contracts
         deploy();

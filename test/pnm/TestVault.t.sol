@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "contracts/Vault.sol";
 import "@pwnednomore/contracts/Agent.sol";
 
-contract FuzzVault is Agent {
+contract TestVault is Agent {
     Vault vault;
 
     address USER = address(0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB);
