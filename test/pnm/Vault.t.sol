@@ -4,10 +4,10 @@ pragma solidity ^0.8.0;
 import "contracts/Vault.sol";
 import "@pwnednomore/contracts/Agent.sol";
 
-contract TestVault is Agent {
+contract VaultTest is Agent {
     Vault vault;
 
-    address USER = address(0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB);
+    address USER = address(0x1);
 
     function deploy() internal {
         vault = new Vault();
