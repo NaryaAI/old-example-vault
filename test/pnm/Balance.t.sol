@@ -12,8 +12,7 @@ contract BalanceTest is VaultTest {
         // Step 2. User owned 1 ether in the vault
         deposit(USER, 1 ether);
 
-        // Step 3. Attacker (we) owned 100000 wei in the vault
-        // 1 ether = 10^18 wei
+        // Step 3. Attacker owned 100000 wei in the vault
         deposit(address(this), 100000 wei);
     }
 
