@@ -1,3 +1,3 @@
 # Sample Project: Vault
 
-[TestBalance](./test/pnm/TestBalance.t.sol)
+[BalanceTest](./test/pnm/BalanceTest.t.sol)
