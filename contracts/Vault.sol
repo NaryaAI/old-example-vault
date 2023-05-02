@@ -4,26 +4,18 @@ pragma solidity ^0.8.0;
 contract Vault {
     mapping(address => uint256) public balances;
 
-    constructor() payable {}
-
-    function balanceOf(address _who) public view returns (uint256 balance) {
-        return balances[_who];
+    // Allows users to put some tokens on contract address
+    function deposit() public payable {
+        balances[msg.sender] = balances[msg.sender] + msg.value;
     }
 
-    function deposit(address _to) public payable {
-        balances[_to] = balances[_to] + msg.value;
-    }
-
-    function withdraw(uint256 _amount) public {
-        if (balances[msg.sender] >= _amount) {
-            (bool result, ) = msg.sender.call{value: _amount}("");
-            if (result) {
-                _amount;
-            }
-
-            unchecked {
-                balances[msg.sender] -= _amount;
-            }
+    // Allows users to get tokens out
+    function withdraw() public {
+        if (balances[msg.sender] > 0) {
+            uint256 balance = balances[msg.sender];
+            (bool result, ) = msg.sender.call{value: balance}("");
+            require(result, "Failed to withdraw");
+            balances[msg.sender] = 0;
         }
     }
 }

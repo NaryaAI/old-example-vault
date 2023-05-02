@@ -1,19 +1,15 @@
 {
-  "name": "demo",
+  "name": "example-vault",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "author": "Narya.ai",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
-    "hardhat": "^2.10.1"
+    "test": "narya test"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.7.3",
-    "@pwnednomore/contracts": "^1.0.7"
+    "@openzeppelin/contracts": "^4.8.3"
+  },
+  "devDependencies": {
+    "@narya-ai/contracts": "^0.4.0"
   }
 }
